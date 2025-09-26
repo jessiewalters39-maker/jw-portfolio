@@ -15,7 +15,7 @@ const PROFILE = {
   phone: "903.802.8180",
   email: "jessiewalters39@gmail.com",
   github: "https://github.com/jessiewalters39-maker/jw-portfolio.git", // TODO: update
-  resumeUrl: "/resume.pdf.pdf", 
+  resumeUrl: "/resume.pdf", 
   summary:
     "Fullstack developer specializing in React, TypeScript, Node.js and cloud. Generative‑native engineer who ships fast using Copilot, Cursor and Claude. Former Systems Engineer with deep infra, security and Azure experience.",
 };
