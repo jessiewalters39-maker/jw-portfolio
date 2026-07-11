@@ -20,13 +20,13 @@ const PROFILE = {
   github: "https://github.com/jessiewalters39-maker",
   resumeUrl: "/resume.pdf",
   tagline:
-    "I turn fuzzy problems into working software by directing AI — and, with four years of infrastructure engineering behind me, I make sure it actually ships, deploys, and runs.",
+    "I turn fuzzy problems into working software by directing AI — and, with seven years in engineering behind me, I make sure it actually ships, deploys, and runs.",
   summary:
     "Systems engineer turned AI solutions builder. I scope real problems, direct modern AI development tools to build the solution end-to-end — front end, API, database, and go-to-market — and lean on my infrastructure background so what I ship is production-ready, not a demo. Looking for forward-deployed / applied-AI work: sit with a hard problem and build the thing that solves it.",
 };
 
 const STATS = [
-  { value: "4+ yrs", label: "Infrastructure engineering" },
+  { value: "7+ yrs", label: "Engineering experience" },
   { value: "170+", label: "Commits on a production build" },
   { value: "10+", label: "Interactive tools shipped" },
   { value: "Solo", label: "Full product, front to back" },
@@ -98,7 +98,7 @@ const PROJECT = {
     "A2P/SMS compliance, lead capture, and transactional email — the operational and regulatory details most builds skip.",
   ],
   tags: ["React", "TypeScript", "Express", "PostgreSQL", "Drizzle", "Vercel", "SEO", "AI-directed"],
-  liveUrl: "#", // add TaskBuild's live URL here to reveal the button
+  liveUrl: "https://www.taskbuildai.com",
 };
 
 const ACCENT = "from-violet-500 via-fuchsia-500 to-cyan-400";
@@ -150,9 +150,9 @@ export default function PortfolioJW() {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-[#07070c] text-white">
-      {/* Animated aurora background */}
-      <div className="absolute inset-0 -z-10">
+    <div className="relative min-h-screen w-full bg-[#07070c] text-white">
+      {/* Animated aurora background — fixed & clipped so it never affects page scroll */}
+      <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
         <Blob className="left-[-10%] top-[-10%] h-[42rem] w-[42rem] bg-violet-600/25" />
         <Blob className="right-[-15%] top-[10%] h-[38rem] w-[38rem] bg-fuchsia-600/20" delay={4} />
         <Blob className="bottom-[-15%] left-[20%] h-[40rem] w-[40rem] bg-cyan-500/20" delay={8} />
