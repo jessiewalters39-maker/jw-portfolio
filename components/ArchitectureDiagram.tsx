@@ -84,7 +84,10 @@ export default function ArchitectureDiagram() {
           aria-hidden
         >
           <defs>
-            <linearGradient id="arch-pulse" x1="0%" y1="0%" x2="100%" y2="0%">
+            {/* userSpaceOnUse: bounding-box gradients vanish on perfectly
+                vertical/horizontal lines (zero-width bbox), which killed the
+                hover highlight on the OpenAI and Node.js spokes. */}
+            <linearGradient id="arch-pulse" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100" y2="100">
               <stop offset="0%" stopColor="#8b5cf6" />
               <stop offset="50%" stopColor="#d946ef" />
               <stop offset="100%" stopColor="#22d3ee" />

@@ -16,7 +16,7 @@ import ArchitectureDiagram from "@/components/ArchitectureDiagram";
 // ---------------------------------------------------------------------------
 const PROFILE = {
   name: "Jessie Walters",
-  title: "AI Solutions Engineer · Forward-Deployed Builder",
+  title: "Forward-Deployed Engineer",
   kicker: "Former Systems Engineer",
   location: "Ben Wheeler, TX",
   phone: "903.802.8180",
@@ -400,8 +400,8 @@ export default function PortfolioJW() {
             <div className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r ${ACCENT}`} />
             <h2 className="text-3xl font-bold text-white md:text-4xl">Let&apos;s build something</h2>
             <p className="mx-auto mt-3 max-w-xl text-white/65">
-              Open to <span className="text-white/90">AI Solutions Engineer</span>,{" "}
-              <span className="text-white/90">Forward-Deployed Engineer</span>, and applied-AI builder roles — remote.
+              Open to <span className="text-white/90">Forward-Deployed Engineer</span> and
+              applied-AI engineering roles — remote.
               Also available for independent and contract builds.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">

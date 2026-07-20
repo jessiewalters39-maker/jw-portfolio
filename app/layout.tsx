@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jessie Walters — AI Solutions Engineer & Builder",
+  title: "Jessie Walters — Forward-Deployed Engineer",
   description:
-    "AI Solutions Engineer and forward-deployed builder. Former Systems Engineer who ships production software by directing AI. Remote, open to work.",
+    "Forward-Deployed Engineer. Former Systems Engineer who ships production AI systems, not demos. Remote, open to work.",
 };
 
 export default function RootLayout({
