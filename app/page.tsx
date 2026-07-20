@@ -4,7 +4,11 @@ import { motion } from "framer-motion";
 import {
   Github, Mail, Phone, MapPin, ExternalLink, Cpu, ShieldCheck,
   Sparkles, Download, ArrowUpRight, Server, Boxes, Bot, Layers,
+  Activity, Network,
 } from "lucide-react";
+import BootSequence from "@/components/BootSequence";
+import WorkflowVisualization from "@/components/WorkflowVisualization";
+import ArchitectureDiagram from "@/components/ArchitectureDiagram";
 
 // ---------------------------------------------------------------------------
 // Quick config — edit these objects only. Everything below is honest and
@@ -151,6 +155,7 @@ export default function PortfolioJW() {
 
   return (
     <div className="relative min-h-screen w-full bg-[#07070c] text-white">
+      <BootSequence />
       {/* Animated aurora background — fixed & clipped so it never affects page scroll */}
       <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
         <Blob className="left-[-10%] top-[-10%] h-[42rem] w-[42rem] bg-violet-600/25" />
@@ -231,6 +236,20 @@ export default function PortfolioJW() {
         </motion.div>
       </header>
 
+      {/* ---------------- Workflow Visualization ---------------- */}
+      <section className="mx-auto max-w-5xl px-6 pb-20">
+        <Reveal>
+          <SectionHeading
+            icon={<Activity className="h-4 w-4" />}
+            kicker="The system in motion"
+            title="How My Automations Run a Business"
+          />
+        </Reveal>
+        <Reveal delay={0.1}>
+          <WorkflowVisualization />
+        </Reveal>
+      </section>
+
       {/* ---------------- Stats ---------------- */}
       <section className="mx-auto max-w-5xl px-6 pb-16">
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
@@ -282,6 +301,20 @@ export default function PortfolioJW() {
             </Reveal>
           ))}
         </div>
+      </section>
+
+      {/* ---------------- Architecture Diagram ---------------- */}
+      <section className="mx-auto max-w-5xl px-6 pb-20">
+        <Reveal>
+          <SectionHeading
+            icon={<Network className="h-4 w-4" />}
+            kicker="How it all connects"
+            title="System Architecture"
+          />
+        </Reveal>
+        <Reveal delay={0.1}>
+          <ArchitectureDiagram />
+        </Reveal>
       </section>
 
       {/* ---------------- Featured Project ---------------- */}
