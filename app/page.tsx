@@ -18,7 +18,7 @@ const PROFILE = {
   name: "Jessie Walters",
   title: "Forward-Deployed Engineer",
   kicker: "Former Systems Engineer",
-  location: "Ben Wheeler, TX",
+  location: "Flint, TX",
   phone: "903.802.8180",
   email: "jessiewalters39@gmail.com",
   github: "https://github.com/jessiewalters39-maker",
