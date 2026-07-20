@@ -24,7 +24,7 @@ const PROFILE = {
   github: "https://github.com/jessiewalters39-maker",
   resumeUrl: "/resume.pdf",
   tagline:
-    "I turn fuzzy problems into working software by directing AI — and, with seven years in engineering behind me, I make sure it actually ships, deploys, and runs.",
+    "I started my career keeping critical infrastructure running. Today I solve business problems by designing AI systems that actually ship — not demos, production systems.",
   summary:
     "I started my career keeping critical infrastructure running. Today, I solve business problems by designing AI systems that actually ship. I scope the problem, direct modern AI development tools, and build the solution end-to-end—from the frontend and APIs to the database and deployment. My infrastructure background keeps me grounded in reliability, so I don't build demos—I build production systems. I'm looking for forward-deployed and applied AI roles where I can sit with customers, understand hard problems, and build software that makes a measurable difference.",
 };
