@@ -26,7 +26,7 @@ const PROFILE = {
   tagline:
     "I turn fuzzy problems into working software by directing AI — and, with seven years in engineering behind me, I make sure it actually ships, deploys, and runs.",
   summary:
-    "Systems engineer turned AI solutions builder. I scope real problems, direct modern AI development tools to build the solution end-to-end — front end, API, database, and go-to-market — and lean on my infrastructure background so what I ship is production-ready, not a demo. Looking for forward-deployed / applied-AI work: sit with a hard problem and build the thing that solves it.",
+    "Systems engineer turned AI solutions engineer. I scope real problems, direct modern AI development tools to build the solution end-to-end — front end, API, database, and go-to-market — and lean on my infrastructure background so what I ship is production-ready, not a demo. Looking for forward-deployed / applied-AI work: sit with a hard problem and build the thing that solves it.",
 };
 
 const STATS = [
