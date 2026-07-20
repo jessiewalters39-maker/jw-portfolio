@@ -2,7 +2,6 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
-const SESSION_KEY = "jw-boot-v3";
 const HEADER_TEXT = "Initializing Jessie Walters...";
 
 const BOOT_LINES = [
@@ -18,26 +17,10 @@ const LINE_MS = 460;
 const MISSION_HOLD_MS = 1100;
 const EXIT_MS = 800;
 
-function hasSeenBoot() {
-  try {
-    return sessionStorage.getItem(SESSION_KEY) === "1";
-  } catch {
-    return false;
-  }
-}
-
-function markBootSeen() {
-  try {
-    sessionStorage.setItem(SESSION_KEY, "1");
-  } catch {
-    /* private mode — just let it replay */
-  }
-}
-
 export default function BootSequence() {
   const reducedMotion = useReducedMotion();
-  // "pending" until we can read sessionStorage on the client; the overlay is
-  // rendered opaque during "pending" so the hero never flashes underneath.
+  // Plays on every full page load. The overlay renders opaque during "pending"
+  // so the hero never flashes before the sequence starts.
   // Exit is a plain CSS opacity transition + unmount timer — deliberately not
   // AnimatePresence, which proved unreliable for this always-on-top overlay.
   const [phase, setPhase] = useState<"pending" | "booting" | "exiting" | "done">("pending");
@@ -56,18 +39,12 @@ export default function BootSequence() {
     if (finishedRef.current) return;
     finishedRef.current = true;
     clearTimers();
-    markBootSeen();
     setPhase("exiting");
     setTimeout(() => setPhase("done"), EXIT_MS + 50);
   }, [clearTimers]);
 
   useEffect(() => {
     if (finishedRef.current) return;
-    if (hasSeenBoot()) {
-      finishedRef.current = true;
-      setPhase("done");
-      return;
-    }
     setPhase("booting");
 
     const schedule = (fn: () => void, ms: number) => {
